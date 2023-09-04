@@ -148,15 +148,15 @@
 </nav>
 <!-- 피드 -->
 <div class="main_body">
-  <div class="left_body">
+  <div class="left_body">{% for feed in feed_list %}
     <div class="border feed_box">
       <div class="feed_name">
         <div class="profile_box">
-          <img class="profile_img" src="https://mblogthumb-phinf.pstatic.net/MjAxODEwMTlfMTgx/MDAxNTM5OTI4MjAwNDEx.k7oG-Q0tA6bdI1smaMzsK4t08NREjRrq3OthZKoIz8Qg.BeZxWi7HekwTWipOckbNWpvnesXuHjpldNGA7QppprUg.JPEG.retspe/eb13.jpg?type=w800">
+          <img class="profile_img" src="{{ feed.profile_image }}">
         </div>
-        <span class="feed_name_txt"> seondal_c </span>
+        <span class="feed_name_txt"> {{ feed.user_id }}</span>
       </div>
-      <img class="feed_img" src="https://blog.japanwondertravel.com/wp-content/uploads/2022/03/manuel-velasquez-ssfp9okORYs-unsplash.jpg">
+      <img class="feed_img" src="{{ feed.image }}">
 
       <div class="feed_icon">
         <div>
@@ -177,53 +177,17 @@
         </div>
       </div>
       <div class="feed_like">
-        <p class="feed_txt"> <b>Liked by baggychani and others</b></p>
+        <p class="feed_txt"> <b>좋아요 {{ feed.like_count }}개</b></p>
       </div>
       <div class="feed_content">
-        <p class="feed_txt"> <b> seondal_c </b>東京旅行また行きたいな~</p>
+        <p class="feed_txt"> <b> {{ feed.user_id }} </b> {{ feed.content }}</p>
       </div>
       <div class="feed_reply">
-        <span class="feed_txt"> <b> baggychani </b> 난 다음주에 베트남으로 간다 ㅅㄱ</span>
-        <span class="feed_txt"> <b> son_ahseop </b> 마 갱기에 집중해라 </span>
+        <span class="feed_txt"> <b> 0214_gun </b> 댓글 미구현 </span>
+        <span class="feed_txt"> <b> dongkam </b> 아직 덜 만듦 </span>
       </div>
     </div>
-    <div class="border feed_box">
-      <div class="feed_name">
-        <div class="profile_box">
-          <img class="profile_img" src="https://mblogthumb-phinf.pstatic.net/MjAxODEwMTlfMTgx/MDAxNTM5OTI4MjAwNDEx.k7oG-Q0tA6bdI1smaMzsK4t08NREjRrq3OthZKoIz8Qg.BeZxWi7HekwTWipOckbNWpvnesXuHjpldNGA7QppprUg.JPEG.retspe/eb13.jpg?type=w800">
-        </div>
-        <span class="feed_name_txt"> seondal_c </span>
-      </div>
-      <img class="feed_img" src="https://a.cdn-hotels.com/gdcs/production95/d985/6a9ba160-5eed-4feb-a4de-43a450a6c413.jpg">
-      <div class="feed_icon">
-        <div>
-          <span class="material-icons-outlined">
-            favorite_border
-          </span>
-          <span class="material-icons-outlined">
-            mode_comment
-          </span>
-          <span class="material-icons-outlined">
-            send
-          </span>
-        </div>
-        <div>
-          <span class="material-icons-outlined">
-            turned_in_not
-          </span>
-        </div>
-      </div>
-      <div class="feed_like">
-        <p class="feed_txt"> <b>Liked by sd._.c2 and others</b></p>
-      </div>
-      <div class="feed_content">
-        <p class="feed_txt"> <b> seondal_c </b> 서울 야경 폼 미쳤다</p>
-      </div>
-      <div class="feed_reply">
-        <span class="feed_txt"> <b> lucete__1021 </b> 형님 군대는 언제 가십니까</span>
-        <span class="feed_txt"> <b> seondal_c </b> 재검 4급뜸 ㅅㄱ </span>
-      </div>
-    </div>
+    {% endfor %}
   </div>
   <div class="right_body">
     <div class="feed_name" style="justify-content: space-between">
@@ -305,8 +269,8 @@
                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHPNYM5RQgA2F7BtpBQ-OrNFKDXVDUpypRuw&usqp=CAU">
         </div>
         <div class="name_content">
-          <span class="feed_name_txt"> lol </span>
-          <span class="name_content_txt"> 이제 설명 쓰기도 귀찮다 </span>
+          <span class="feed_name_txt"> dongkam </span>
+          <span class="name_content_txt"> Follwed by poiuy0712 </span>
         </div>
         <a class="link_txt">
           Follow
